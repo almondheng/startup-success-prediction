@@ -10,6 +10,10 @@ matplotlib = "*"
 seaborn = "*"
 scikit-learn = "*"
 xgboost = "*"
+flask = "*"
+waitress = "*"
+gunicorn = "*"
+cloudpickle = "*"
 
 [dev-packages]
 ipykernel = "*"
