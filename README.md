@@ -8,6 +8,24 @@ A machine learning model can be trained on this historical startup dataset to pr
 
 Dataset source: https://www.kaggle.com/datasets/yanmaksi/big-startup-secsees-fail-dataset-from-crunchbase
 
+## Deployment
+The model is deployed to [Render](https://startup-success-prediction.onrender.com). Run inference by calling the endpoint:
+```bash
+curl -X POST https://startup-success-prediction.onrender.com/predict \
+     -H "Content-Type: application/json" \
+     -d '{
+         "funding_total_usd": 25500000,
+         "funding_rounds": 10,
+         "country_code": "US",
+         "state_code": "CA",
+         "region": "Silicon Valley",
+         "city": "San Francisco",
+         "category_list": "Technology|Software",
+         "first_funding_at": "2022-01-01",
+         "last_funding_at": "2023-01-01"
+     }'
+```
+
 # Getting started
 
 ## Prerequisite
